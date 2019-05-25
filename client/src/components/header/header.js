@@ -2,17 +2,17 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { isAuthenticated } from '../commons/isAuth'
-import logo from '../../images/logo2.png'
+import logo from '../../images/fundo-logo.JPG'
 import '../../App.css';
 const Header = (props) => {
     return (
         <div className="navbar-fixed">
             <nav className="black">
                 <div>
-                    <Link to='/' className="brand-logo"><img src={logo} className='logo'></img></Link>
-                    <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                    <Link to='/' className="brand-logo"><img src={logo} className='logo' alt='logo'></img></Link>
                     <ul className="right hide-on-med-and-down">
-                    <li><Link to ='/campaign/list'>Browse campaign</Link></li>
+                        <li><Link to ='/campaign/list'>Browse campaign</Link></li>
+                        <li><Link to='/how-it-works'>How it works?</Link></li>
                         {
                         !isAuthenticated(props.user) && (
                         <React.Fragment>

@@ -58,7 +58,7 @@ const userSchema = new Schema({
 
 userSchema.pre('save', function(next) {
     const user = this
-    if(user.isNew) {            //the function executes only when the user is new
+    if(user.isNew) {           
         bcryptjs.genSalt(10)
             .then(function(salt){
                 bcryptjs.hash(user.password, salt)

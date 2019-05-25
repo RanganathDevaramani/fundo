@@ -41,28 +41,30 @@ class UserLogin extends React.Component {
         }
         return (
             <div className="auth-body">
-                <div class="row">
-                    <div class="col s6 offset-s4">
-                        <div class="col s12 m8">
-                            <div class="card depth-z">
-                                <div class="card-stacked">
-                                    <div class="card-content">
-                                        <h2 className="card-txt">Login</h2>
+                <div className="row">
+                    <div className="col s6 offset-s4">
+                        <div className="col s12 m8">
+                            <div className="card depth-z">
+                                <div className="card-stacked">
+                                    <div className="card-content">
+                                        <h2 className="card-txt">Sign in</h2>
                                         { this.state.notice && this.state.notice }
                                         <form onSubmit={this.handleSubmit}>
                                             <div>
                                                 Email
                                                 <input type="text" value={this.state.email}  
-                                                onChange={this.handleChange} name="email" placeholder='abc@gmail.com'/>
+                                                onChange={this.handleChange} name="email" placeholder='abc@gmail.com' required/>
                                             </div>
                                             <div>
                                                 Password
                                                 <input type="password" value={this.state.password} 
-                                                placeholder="********" onChange={this.handleChange} name="password" />  
+                                                placeholder="********" onChange={this.handleChange} name="password" required/>  
                                             </div>
                                             <br/>
-                                            <Link id="forgot-password">Forgot password?</Link>
-                                            <button id="button-login" type="submit" class="waves-effect waves-light btn green">Login</button>
+                                            <span id="forgot-password">Forgot password?</span>
+                                            <br/>
+                                            <button id="button-auth" type="submit" className="waves-effect waves-light btn green">login</button>
+                                            <br/>
                                             <span className="new-fundo">New to Fundo?</span><Link to='/users/register'>Register</Link>
                                         </form> 
                                     </div>

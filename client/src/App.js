@@ -8,6 +8,7 @@ import UserAccount from './components/user/account'
 import UserLogout from './components/user/logout'
 import newCampaign from './components/campaign/new'
 import BrowseCampaign from './components/campaign/browseCampaign'
+import HowItWorks from './components/home/howItWorks'
 import Header from './components/header/header'
 
 import './App.css';
@@ -28,6 +29,7 @@ class App extends React.Component {
           <Route path='/users/account' component={UserAccount} exact={true}></Route>
           <Route path ='/campaign/new' component = { newCampaign } exact = {true} />
           <Route path='/campaign/list' component = {BrowseCampaign} exact = {true} />
+          <Route path='/how-it-works' component = {HowItWorks} exact = {true} />
         </Switch>
       </BrowserRouter>
     );

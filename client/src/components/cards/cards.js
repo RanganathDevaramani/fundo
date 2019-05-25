@@ -22,7 +22,6 @@ class CampaignCard extends React.Component{
                   I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div className="card-action">
-                  <a>This is a link</a>
                 </div>
               </div>
             </div>

@@ -7,6 +7,7 @@ export const startAddUser = (formData, props) => {
     return(dispatch) => {
         axios.post('/users/login', formData)
         .then(response => {
+            console.log(response.data)
             axios.defaults.headers['x-auth'] = response.data.token
             localStorage.setItem('token', response.data.token)
             dispatch(addUser(response.data.user))

@@ -1,44 +1,24 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 10vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  font-family: 'Rubik', sans-serif;
 }
 
 .logo{
-  width: 3.5em;
+  width: 90px;
   margin-left: 1em;
 }
+
 .card-txt{
   text-align : center;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px
 }
+.navbar-fixed{
+  font-size: 120px;
+}
 
 .card.horizontal{
-  margin-top: -15em;
+  margin-top: 3em;
 }
 .main-txt {
   text-align: center;
@@ -51,23 +31,75 @@
 .card{
   margin-top: 5em;
 }
+.card-account{
+  margin-top: 5px;
 
-#button-login{
-  width: 28em;
+  text-align: center;
+  height: 550px;
+}
+
+#button-auth{
   margin-top: 5px;
   margin-bottom: 15px;
-
 }
+
 .new-fundo{
-  margin-left: 6em;
   margin-right: 2em;
 }
-
-#forgot-password{
-  margin-left: 17em;
+#button-auth{
+  border-radius: 10px;
+  width: -webkit-fill-available;
 }
 
 .auth-body{
   background: url('https://github.com/images/modules/site/heroes/simple-codelines.svg'),#2b3137;
   height: 624px;
+}
+
+.footer-links{
+  margin-top: 20px;
+}
+
+li{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.footer-icons{
+  margin-top: 2em;
+  margin-left: 1em;
+}
+.acc-ul{
+  margin-top:50px;
+  font-weight: bold;
+}
+.acc-li{
+  margin-top:25px;
+  font-size: 20px
+}
+
+.footer-logo{
+  width : 150px;
+}
+
+.dark-text{
+  font-weight: bold;
+  margin-top: 1em;
+}
+.crowd-txt{
+  font-weight: 500;
+  font-size: 30px;
+}
+.works-pic{
+  width : 600px;
+  height: 350px;
+}
+.work-info{
+  margin-top: 4em;
+  margin-left : 3em;
+}
+
+.camp-details{
+  font-weight: 600;
+  font-size : 20px;
 }

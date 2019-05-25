@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux"
 import { startAddCampaign } from '../../redux/actions/campaign';
-import { startGetCategory } from '../../redux/actions/category';
 
 class newCampaign extends React.Component {
     constructor(props){

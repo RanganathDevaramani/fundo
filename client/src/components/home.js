@@ -11,7 +11,7 @@ import CampaignCard from './cards/cards'
 class Home extends React.Component{
     render(){
         return(
-            <div style={{paddingTop : '15px'}}>
+            <div>
                 <Carousel options={{fullWidth: true,indicators: true, duration: 3}} images={[
                         img1,img2,img3
                     ]} />
@@ -22,7 +22,7 @@ class Home extends React.Component{
                         {
                             [1,2,3,4,5].map(num => {
                                 return (                                 
-                                    <CampaignCard />
+                                    <CampaignCard/>
                                 )
                             })
                         }

@@ -61,35 +61,39 @@ class UserRegister extends React.Component{
     render(){
         return(
             <div className="auth-body">
-                <div class="row offset-s1">
-                <div class="col s6 offset-s1">
+                <div className="row">
+                <div className="col s6 offset-s1">
                     <h2 className="main-txt">We are here to help you</h2>
                 </div>
-                <div class="col s6 offset-s8">
-                    <div class="col s12 m7">
-                        <div class="card horizontal">
-                            <div class="card-stacked">
-                                <div class="card-content">
+                <div className="col s5">
+                    <div className="col s12 m8">
+                        <div className="card">
+                            <div className="card-stacked">
+                                <div className="card-content">
                                     <form onSubmit={this.handleSubmit}>
                                         <h5 className="card-txt">Register</h5>
                                         <p align='center'>{ this.state.notice && this.state.notice }</p>
                                             <div>
                                                 Username
-                                                <input type='text' onChange={this.handleChange} name='username' placeholder='abc'/>
+                                                <input type='text' onChange={this.handleChange} name='username' 
+                                                placeholder='abc' required/>
                                             </div>
                                             <div >
                                                 Email
                                                 <input type='text' 
                                                 onChange={this.handleChange}
-                                                name='email' placeholder='abc@gmail.com'/>
+                                                name='email' placeholder='abc@gmail.com' required
+                                                />
                                             </div>
                                             <div >
                                                 Password
-                                                <input type={this.state.isChecked ? 'text' : 'password'} onChange={this.handleChange} name='password' placeholder='************'/>
+                                                <input type={this.state.isChecked ? 'text' : 'password'} 
+                                                onChange={this.handleChange} name='password' placeholder='************' required/>
                                             </div>
                                             <div >
                                                 Confirm Password
-                                                <input type={this.state.isChecked ? 'text' : 'password'} onChange={this.handleChange} name='confirmPassword' placeholder='************'/>
+                                                <input type={this.state.isChecked ? 'text' : 'password'} 
+                                                onChange={this.handleChange} name='confirmPassword' placeholder='************'/>
                                             </div>
                                             <br/>
                                             <label>
@@ -97,8 +101,7 @@ class UserRegister extends React.Component{
                                                 value = {this.state.isChecked} onChange = {this.handleCheck} /><span>Show password</span>
                                             </label>
                                             <br/>
-                                            <br/>
-                                            <button type="submit" class="waves-effect waves-light btn blue">Submit</button>
+                                            <button type="submit" id ="button-auth" className="waves-effect waves-light btn blue">Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -106,7 +109,7 @@ class UserRegister extends React.Component{
                 </div>
                 </div>
                 </div>
-            </div>               
+            </div>      
         )
     }
 }

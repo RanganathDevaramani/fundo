@@ -27,7 +27,6 @@ export const startGetCampaign = () => {
   return(dispatch) => {
     axios.get('/campaign/campaigns-list')
     .then(response => {
-      console.log(response.data)
       dispatch(getCampaign(response.data))
     })
   }

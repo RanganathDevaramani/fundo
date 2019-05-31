@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const { upload } = require('../middlewares/multer')
 const { Campaign } = require('../models/campaign')
 const { User } = require('../models/user')
 const { CampaignUpdates} = require('../models/campaign-updates')
@@ -16,16 +15,17 @@ router.get('/campaigns-list', (req, res) => {
         })
 })
 
-router.post("/new", authenticateUser, upload,  (req, res) => {
-    const { title, description, targetAmount, imageUrl, briefStory, benficiary, accountDetails} = req.body
+router.post("/new", authenticateUser, (req, res) => {
+    const { title, description, targetAmount, imageUrl, categoryId, briefStory, benificiary, accountDetails} = req.body
     const campaign = new Campaign({
         title,
         description,
         targetAmount,
         briefStory,
-        benficiary,
+        benificiary,
         accountDetails,
-        imageUrl
+        imageUrl,
+        categoryId
     })
     campaign.user = req.user._id
     campaign.save()
@@ -35,9 +35,7 @@ router.post("/new", authenticateUser, upload,  (req, res) => {
                 .then((user) => {
                     user.campaign.push(campaign._id)
                     user.save()
-                        .then((user) => {
-                            console.log(user)
-                        })
+                        .then((user) => {})
                 })
                 res.send(campaign)
         })

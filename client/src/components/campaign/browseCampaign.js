@@ -30,9 +30,11 @@ class BrowseCampaign extends React.Component{
                 <h4>All campaigns</h4>
                 <ul>
                     {
-                        this.props.campaigns.map(campaign=> {
+                        this.props.campaigns.map(campaign => {
                             return (
-                                <li key={campaign.id}>{campaign.title}</li>
+                                <div>
+                                    <li>{campaign.title}</li>
+                                </div>
                             )
                         })
                     }
